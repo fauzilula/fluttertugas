@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/form.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/data.dart';
+import 'package:counter_7/watchpage.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key});
+  const MyDrawer(BuildContext context, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,17 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const MyDataPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watch List'),
+            onTap: () {
+              // Route menu ke halaman utama
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyWatchlistPage()),
               );
             },
           ),

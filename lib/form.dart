@@ -26,7 +26,7 @@ class _MyFormPageState extends State<MyFormPage> {
           title: const Text('Form Budget'),
         ),
         // Menambahkan drawer menu
-        drawer: const MyDrawer(),
+        drawer: MyDrawer(context),
         body: Form(
           key: _formKey,
           child: SingleChildScrollView(

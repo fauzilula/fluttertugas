@@ -25,7 +25,7 @@ class _MyDataPageState extends State<MyDataPage> {
         title: const Text('Form Budget'),
       ),
       // Menambahkan drawer menu
-      drawer: const MyDrawer(),
+      drawer: MyDrawer(context),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20.0),
